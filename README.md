@@ -1,4 +1,4 @@
-# Game
+# Guess the game
 # 猜数游戏
 > #### 基本信息
 >
