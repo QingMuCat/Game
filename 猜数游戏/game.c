@@ -29,11 +29,13 @@ void print_score(int count)
 
 void menu()
 {
-	printf("********************************\n");
-	printf("*******欢迎来到猜数字游戏*******\n");
-	printf("************请选择>:************\n");
-	printf("******1.Start        0.Exit******\n");
-	printf("********************************\n");
+	
+	printf("-----------------------------\n");
+	printf("*******欢迎来到猜数字游戏******\n");
+	printf("************请选择>:**********\n");
+	printf("******1.Start        0.Exit***\n");
+	printf("******  猜数范围[0-100]   *****\n");
+	printf("-------------------------------\n");
 }
 
 // 游戏部分
@@ -47,7 +49,7 @@ void game()
 	int count = 0;// 记录猜对次数，给予判定
 	while (1)
 	{
-
+		
 		printf("请猜数字:>\n");
 		scanf_s("%d", &guess);//vs2022使用scanf无法进行编译，需使用scanf_s可过编译
 		if (guess > ret)
@@ -55,20 +57,22 @@ void game()
 			printf("猜大了\n");
 			max = guess;
 			printf("猜测范围要在%d - %d\n", min, max);
+			count++;
 		}
 		else if (guess < ret)
 		{
 			printf("猜小了\n");
 			min = guess;
 			printf("猜测范围要在%d - %d 之间\n", min, max);
+			count++;
 		}
 		else
 		{
 			printf("恭喜你，猜对了\n");
-			print_score(count);//输出"void print_score(int count)"内容
+            printf("一共猜了[%d]次就出了结果, 那就给予你相应的奖励句吧！\n", count);
+			print_score(count);
 			break;
 		}
-
 	}
 }
 
