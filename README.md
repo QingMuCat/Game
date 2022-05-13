@@ -9,5 +9,5 @@
 ``QQ:1242550160``
 
  ``**[猜数游戏流程图]**``
-
-![](https://seikim.com/i/2022/04/23/lrrj0.png)
+ 
+![](https://s3.bmp.ovh/imgs/2022/05/12/6a9639edccc01324.png)
